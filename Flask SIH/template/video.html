@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>capture answer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+        {% if message %}
+        <div>
+            <img src="{{ url_for('video_feed') }}" alt="" style="width:50%;">
+        </div>
+        {% endif %}
+        <div class="ml-4 mb-4"><a href="/open/{{quizes.qno}}"><button class="btn btn-success">Capture answer</button></a></div>
+        <div  class="ml-4 mb-4"><a href="/close/{{quizes.qno}}"><button class="btn btn-success">close</button></a></div> 
+        {% if message2 %}
+        <div>
+            <img src="{{ url_for('video_feed2') }}" alt="" style="width:50%;">
+        </div>
+        {% endif %}
+        <div class="ml-4 mb-4"><a href="/open2/{{quizes.qno}}"><button class="btn btn-success">Take Attendance</button></a></div>
+        <div  class="ml-4 mb-4"><a href="/close2/{{quizes.qno}}"><button class="btn btn-success">close</button></a></div>
+        <div  class="ml-4 mb-4"><a href="/ans"><button class="btn btn-success">Check Option</button></a></div>
+        <a class="btn btn-primary btn-success ml-4 mb-4" href="/calculate/{{quizes.qno}}" role="button">Show Answer</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+

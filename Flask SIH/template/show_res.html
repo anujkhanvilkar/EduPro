@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">sno</th>
+            <th scope="col">question_id</th>
+            <th scope="col">roll_no</th>
+            <th scope="col">option</th>
+            <th scope="col">right</th>
+            <th scope="col">marks</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for per in ok %}
+          <tr>
+            <th scope="row">{{ per.sno }}</th>
+            <td>{{ per.question_id }}</td>
+            <td>{{ per.roll_no }}</td>
+            <td>{{ per.option }}</td>
+            <td>{{ per.right }}</td>
+            <td>{{ per.marks }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a href="/mail">send mail</a>
+  </body>
+</html>
+<style>
+    body{
+        background-color: #f1d6eb;
+    }
+</style>
